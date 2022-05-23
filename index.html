@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Green Badge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sticky"></div>
+    <header>
+        <h1>CSS Green Badge</h1>
+    </header>
+
+    <article>
+        <h2>CSS Box Model</h2>
+        <h3>Negative Margins in CSS</h3>
+        <div class="div">
+            <p class="paragraph">First paragraph with a bit of text in it to provide some content.</p>
+            <p class="paragraph">Second paragraph with a bit of text in it to provide some content.</p>
+            <p class="paragraph">Third paragraph with a bit of text in it to provide some content.</p>
+        </div>
+    </article>
+
+    <article>
+        <h2>Positioning</h2>
+        <div class="large">
+            <div class="small"></div>
+        </div>
+        <div class="fixed"></div>
+        <div class="text">
+            <p>The original machine has a base-plate of prefabulated amulite, surmounted by a malleable logarithmic
+                casing in such a way that the two spurving bearings were in a direct line with the pentametric fan. The
+                latter consisted simply of six hydrocoptic marzelvanes, so fitted to the ambifacient lunar waneshaft
+                that side fumbling was effectively prevented. The main winding was of the normal lotus-o-delta type
+                placed in panendermic semiboloid slots in the stator, every seventh conductor being connected by a
+                non-reversible tremie pipe to the differential girdlespring on the "up" end of the grammeters.</p>
+        </div>
+        <p><strong>fixed</strong> alwyays relates to root and stays when scrolling</p>
+        <p><strong>sticky</strong> by default it is relative, on scroll it becomes fixed</p>
+    </article>
+
+
+    <article>
+        <h2>Z-index</h2>
+        <div class="z--one"><span class="index--red"></span></div>
+        <div class="z--two"><span class="index--green"></span></div>
+        <div class="z--three"><span class="index--blue"></span></div>
+
+        <div class="parent">
+            Parent
+            <div class="child child--one">One</div>
+            <div class="child child--two">Two</div>
+            <div class="child child--three">Three</div>
+        </div>
+    </article>
+
+    <article>
+        <h2>float and clear</h2>
+        <div class="container">
+            <div class="float--blue"></div>
+            <div class="float--green"></div>
+            <div class="float--red"></div>
+        </div>
+        <div class="container">
+            <div class="float--left"></div>
+            <div class="div2">
+                div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left,
+                the text in div2 flows around div1.
+            </div>
+        </div>
+        <div class="container">
+            <div class="float--left"></div>
+            <div class="clear">
+                Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to
+                the left. You can also clear "right" and "both".
+            </div>
+        </div>
+        <br /><br />
+    </article>
+
+    <article>
+        <section>
+            <h2>Pseudo Selectors & their compatibility among browsers</h2>
+            <p><strong>Pseudo-classes</strong> are CSS classes used to define the state of an element. <br />
+                Used to select elements based on their attributes, states and relative position.</p>
+            <dl>
+                <dt>dynamic pseudo-classes</dt>
+                <dd>link</dd>
+                <dd>visited</dd>
+                <dd>hover</dd>
+                <dd>active</dd>
+                <dt>structural pseudo-classes</dt>
+                <dd>:root - element at root of document => html element</dd>
+                <dd>:first-child</dd>
+                <dd>:last-child</dd>
+                <dd>:nth-child() - 2n even; 2n+1 odd numbers</dd>
+                <dd>:first-of-type</dd>
+                <dd>:last-of-type</dd>
+                <dd>:nth-of-type() - like nth-child(), but for elements on same level with differing types</dd>
+                <dd>:only-of-type - only if element is one of it kind within current parrent.</dd>
+                <dd>:nth-last-of-type() - like nth-of-type() but starts counting from the bottom not top</dd>
+                <dd>:nth-last-child() - like nth-child() but counts from bottom not top</dd>
+                <dt>Other pseudo classes</dt>
+                <dd>:enabled</dd>
+                <dd>:disabled</dd>
+                <dd>:checked</dd>
+                <dd>:target - selects the current active #news element (clicked on a URL containing that anchor name)
+                </dd>
+                <dd>:focus</dd>
+                <dd>:required</dd>
+                <dd>:optional</dd>
+                <dd>:not()</dd>
+                <dd>:empty</dd>
+            </dl>
+        </section>
+        <section>
+            <p><strong>Pseudo-elements</strong> new elements that are not specified in the document <br />
+                cool effects with minimal markup, keeping presentation of document in CSS and not HTML</p>
+            <dl>
+                <dt>Pseudo-elements</dt>
+                <dd>::before</dd>
+                <dd>::after</dd>
+                <dd>::first-letter</dd>
+            </dl>
+
+            <label class="required">Name</label>
+            <input type="text" required>
+            <button data-tooltip="Tooltip">Submit form</button>
+            <div class="text">
+                <p>The original machine has a base-plate of prefabulated amulite, surmounted by a malleable logarithmic
+                    casing in such a way that the two spurving bearings were in a direct line with the pentametric fan.
+                    The
+                    latter consisted simply of six hydrocoptic marzelvanes, so fitted to the ambifacient lunar waneshaft
+                    that side fumbling was effectively prevented. The main winding was of the normal lotus-o-delta type
+                    placed in panendermic semiboloid slots in the stator, every seventh conductor being connected by a
+                    non-reversible tremie pipe to the differential girdlespring on the "up" end of the grammeters.</p>
+            </div>
+        </section>
+    </article>
+
+    <article>
+        <h2>Cross browser compatible websites</h2>
+        <p>check cross browser compatibility beforehand - canIuse <br />
+            add the DOCTYPE <br />
+            reset CSS to default CSS with:
+            "link rel="stylesheet" href="assets/styles/normalize.css""
+            before importing my main css. <br />
+            use conditional comments to use separate stylesheets for differeent browsers
+            <!-- [if IE ]>
+                <link href="iecss.css" rel="stylesheet" type="text/css">
+            <![endif]--> <br />
+            use corss browser friendly libraries and frameworks <br />
+            use <strong>Jigsaw</strong> CSS validator <br />
+            perform cross browser testing with <strong>Lambda Test</strong>
+        </p>
+    </article>
+
+    <article>
+        <h2>Media Queries</h2>
+        <p>Based on:</p>
+        <ul>
+            <li>viewport width</li>
+            <li>sreen resolution</li>
+            <li>operating system preference</li>
+        </ul>
+
+        <p>Can be included in <strong>link element of head</strong> low loading priority level</p>
+        <p>Can be included in <strong>source</strong> element of <strong>picture</strong></p>
+        <article class="cards">
+            <section class="cards__card card--light">
+                <h4 class="cards__title">Title</h4>
+                <picture class="cards__picture">
+                    <source srcset="/img/pink_flowers.jpg" media="(min-width: 1000px)">
+                    <source srcset="/img/white_flower.jpg" media="(min-width: 700px)">
+                    <img src="/img/orange_flowers.jpg" alt="Flowers">
+                </picture>
+                <p class="cards__text">The essential feature of a text input is its ability to accept plain text.
+                    When we need it to be
+                    multiline, nothing changes semantically — that’s why multiline is just a modifier. At the HTML
+                    level, this is represented by different markup for technical reasons, which is also fine because
+                    we’re only defining semantics, not the implementation. The textfield tag itself is an element, and
+                    label is another element; later, we might need other elements, like a status icon, error message
+                    placeholder or auto-suggestion.</p>
+            </section>
+            <section class="cards__card card--dark">
+                <h4 class="cards__title">Title</h4>
+                <picture class="cards__picture">
+                    <source srcset="/img/pink_flowers.jpg" media="(min-width: 1000px)">
+                    <source srcset="/img/white_flower.jpg" media="(min-width: 700px)">
+                    <img src="/img/orange_flowers.jpg" alt="Flowers">
+                </picture>
+                <p class="cards__text">The essential feature of a text input is its ability to accept plain text.
+                    When we need it to be
+                    multiline, nothing changes semantically — that’s why multiline is just a modifier. At the HTML
+                    level, this is represented by different markup for technical reasons, which is also fine because
+                    we’re only defining semantics, not the implementation. The textfield tag itself is an element, and
+                    label is another element; later, we might need other elements, like a status icon, error message
+                    placeholder or auto-suggestion.</p>
+            </section>
+        </article>
+        <p>Can be used on <strong>style element</strong></p>
+        <dl>
+            <dt>@media-rule</dt>
+            <dt>media types</dt>
+            <dd><strong>all</strong> - all devices</dd>
+            <dd><strong>print</strong> - matches print preview or content divided up intended to print</dd>
+            <dd><strong>screen</strong> - devices with screen</dd>
+            <dd><strong>speech</strong> - matches devices with screenreader, that read the content audibly</dd>
+            <dt>media features</dt>
+            <dd>viewport/page characteristics</dd>
+            <dd>display quality</dd>
+            <dd>color</dd>
+            <dd>interaction</dd>
+            <dd>video-prefixed</dd>
+            <dd>scripting</dd>
+            <dd>user preference</dd>
+            <dt>operators</dt>
+            <dd>and</dd>
+            <dd>or = ,</dd>
+            <dd>not = and (not())</dd>
+            <dt>prefers-colors-scheme</dt>
+        </dl>
+
+        <section>
+            <h3>Accessibility</h3>
+            <dl>
+                <dt>prefers-reduced-motion</dt>
+                <dd>for animations</dd>
+                <dt>prefers-contrast</dt>
+                <dd>increases/decreases contrast</dd>
+                <dt>prefers-color-scheme</dt>
+                <dd>dark/light</dd>
+            </dl>
+        </section>
+
+        <section class="titles">
+            <h4 class="title">Title</h4>
+            <h5 class="subtitle">Subtitle</h5>
+        </section>
+    </article>
+
+    <article>
+        <h2 class="transition">CSS transitions</h2>
+        <p class="">way to control animation speed when changing CSS properties</p>
+        <div class="box"></div>
+        <section>
+            <h3>Using transition for highlighting menus</h3>
+            <nav class="nav">
+                <a class="link" href="#">Home</a>
+                <a class="link" href="#">About</a>
+                <a class="link" href="#">Contact Us</a>
+                <a class="link" href="#">Links</a>
+            </nav>
+        </section>
+        <section>
+            <h3>Using JavaScript</h3>
+            <p>Careful using transition after adding element to DOM using appendChild() <br />
+                removing elements display:none property <br />
+                -> treated as if initial state has never occurred and element was always in its final state <br />
+                -> solution: window.setTimeout()</p>
+            <h3>Using transitions to make JavaScript functionality smooth</h3>
+            <div id="foo" class="ball"></div>
+        </section>
+    </article>
+
+    <article>
+        <h2>CSS animations</h2>
+        <p>each animation needs to be defined by <strong>@keyframes</strong> rule which is then called by
+            <strong>animation</strong> property
+        </p>
+        <div class="element"></div>
+        <h3>sub-properties</h3>
+        <dl>
+            <dt>animation-name</dt>
+            <dd>defines name of keyframes @rule</dd>
+            <dt>animation-duration</dt>
+            <dd>length of animation</dd>
+            <dt>animation-timing-function</dt>
+            <dd>preset acceleration curves ease/linear etc.</dd>
+            <dt>animation-delay</dt>
+            <dt>animation-direction</dt>
+            <dd>animation-iteration-count</dd>
+            <dt>anumation-fill-mode</dt>
+            <dd>sets which values are applied before/after animation</dd>
+            <dt>animation-play-state</dt>
+            <dd>pause/play animation</dd>
+        </dl>
+        <div class="element--two"></div>
+    </article>
+
+    <article class="video">
+        <h2>keyframes & animation</h2>
+        <div class="box"></div>
+        <div class="box--transitions"></div>
+        <section>
+            <div class="landing">
+                <h3 class="landing--title">Title</h3>
+                <p class="landing--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sed labore
+                    laudantium odio esse distinctio deleniti odit dolorem vitae optio quas possimus veniam quia,
+                    provident, eligendi officiis cum harum tempora accusamus quam tempore maiores veritatis deserunt
+                    temporibus. Eius corporis adipisci asperiores odio ea minima a aperiam repellendus iusto, totam
+                    odit.</p>
+                <a class="landing--btn" href="#">Read More</a>
+            </div>
+        </section>
+    </article>
+
+    <article>
+        <h2>Flexbox</h2>
+        <p>One dimensional layout method for arranging items in rows or columnsd</p>
+
+        <header class="flexbox--header">
+            <h3 class="flexbox--title">Sample Flexbox header</h3>
+        </header>
+        <section class="flexbox--section">
+            <article class="flexbox--article">
+                <h4>Article one</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae officiis. Sit accusantium
+                    asperiores officiis distinctio ipsam, aut delectus, eum quas cupiditate expedita dolorum sapiente
+                    velit inventore? Voluptates pariatur dolorem aspernatur fuga laudantium? Dolores quaerat minima,
+                    laborum sequi voluptatibus culpa doloremque voluptas vitae dolorum? Aliquid, fuga. Perferendis ipsa
+                    corrupti sit.</p>
+            </article>
+            <article class="flexbox--article">
+                <h4>Article two</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae officiis. Sit accusantium
+                    asperiores officiis distinctio ipsam, aut delectus, eum quas cupiditate expedita dolorum sapiente
+                    velit inventore? Voluptates pariatur dolorem aspernatur fuga laudantium? Dolores quaerat minima,
+                    laborum sequi voluptatibus culpa doloremque voluptas vitae dolorum? Aliquid, fuga. Perferendis ipsa
+                    corrupti sit.</p>
+            </article>
+            <article class="flexbox--article">
+                <h4>Article three</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae officiis. Sit accusantium
+                    asperiores officiis distinctio ipsam, aut delectus, eum quas cupiditate expedita dolorum sapiente
+                    velit inventore? Voluptates pariatur dolorem aspernatur fuga laudantium? Dolores quaerat minima,
+                    laborum sequi voluptatibus culpa doloremque voluptas vitae dolorum? Aliquid, fuga. Perferendis ipsa
+                    corrupti sit.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae officiis. Sit accusantium
+                    asperiores officiis distinctio ipsam, aut delectus, eum quas cupiditate expedita dolorum sapiente
+                    velit inventore? Voluptates pariatur dolorem aspernatur fuga laudantium? Dolores quaerat minima,
+                    laborum sequi voluptatibus culpa doloremque voluptas vitae dolorum? Aliquid, fuga. Perferendis ipsa
+                    corrupti sit.</p>
+            </article>
+        </section>
+        <div class="flexbox--btns">
+            <button class="flexbox--btn">Button 1</button>
+            <button class="flexbox--btn">Button 2</button>
+            <button class="flexbox--btn">Button 3</button>
+            <button class="flexbox--btn">Button 4</button>
+            <button class="flexbox--btn">Button 5</button>
+        </div>
+    </article>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
