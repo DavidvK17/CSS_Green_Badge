@@ -637,3 +637,57 @@ h2::first-letter {
   align-self: flex-start;
   order: -1;
 }
+
+.one {
+  grid-area: header;
+}
+
+.two {
+  grid-area: menu;
+}
+
+.three {
+  grid-area: main;
+}
+
+.four {
+  grid-area: right;
+}
+
+.five {
+  grid-area: footer;
+}
+
+.grid--container {
+  font-size: 1.6rem;
+  background-color: #2196f3;
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  gap: 10px;
+  text-align: center;
+
+  &__new {
+    @extend .grid--container;
+    margin-top: 25px;
+    grid-template-areas: unset;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.grid--item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+}
+
+.one__new {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.six__new {
+  grid-column: 1 / 3;
+}
