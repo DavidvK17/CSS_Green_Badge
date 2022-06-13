@@ -18,17 +18,18 @@ nav {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 p,
 li,
-dl {
-  font-size: 1.5rem;
+dl,
+label {
+  font-size: 2rem;
 }
 
 dt {
@@ -95,7 +96,7 @@ h2::first-letter {
   background-color: #006400;
   position: -webkit-sticky;
   position: sticky;
-  top: 50px;
+  top: 100px;
   left: 950px;
 }
 
